@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
         bookList.innerHTML = filteredBooks
             .map(
                 (book) => `
-                <div class="book-card" onclick="navigateToDetails(${book.id})">
+                <div class="book-card" >
 
-                <img src="${
+                <img onclick="navigateToDetails(${book.id})" src="${
                     book.formats["image/jpeg"] || "placeholder.jpg"
                 }" alt="Book Cover" class="book-cover">
 
@@ -127,19 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
             hideLoadingSpinner();
         }, 300);
     });
-
-    const toggleWishlist = (bookId) => {
-        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-        if (wishlist.includes(bookId)) {
-            wishlist = wishlist.filter((id) => id !== bookId);
-            alert("Book removed from wishlist");
-        } else {
-            wishlist.push(bookId);
-            alert("Book added to wishlist");
-        }
-        localStorage.setItem("wishlist", JSON.stringify(wishlist));
-        displayBooks();
-    };
 
     const showLoadingSpinner = () => {
         spinner.classList.remove("hidden");
