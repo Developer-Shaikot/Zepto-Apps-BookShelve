@@ -32,20 +32,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             bookDetailsContainer.innerHTML = `
                 <div class="book-details">
-                    <img src="${
-                        book.formats["image/jpeg"] || "placeholder.jpg"
-                    }" alt="Book Cover" class="book-details-cover">
+                     <div class="book-detail-format">
+            <img src="${
+                book.formats["image/jpeg"] || "placeholder.jpg"
+            }" alt="Book Cover" class="book-details-cover">
+                    <br/>
+                    <div class="book-formats">
+                            <h3>Available Formats:</h3>
+                            ${formatLinks}
+                        </div>
+        </div>
                     <div class="book-info">
                         <h1 class="book-title">${book.title}</h1>
                         <p>Author: ${book.authors.map((author) => author.name).join("<br/> ")}</p>
                         <p class="book-description">${book.bookshelves.join("<br/> ")}</p>
                         <p class="book-description">${book.subjects.join("<br/> ")}</p>
-                        <div class="book-formats">
-                            <h3>Available Formats:</h3>
-                            ${formatLinks}
-                        </div>
+                        
                         <button class="book-details-content" onclick="toggleWishlist(${book.id})">
-                            <img src="assets/icons/wishlist.png" alt="icon" class="icon">Add To Wishlist❤️
+                            <img src="assets/icons/wishlist.png" alt="icon" class="icon">❤️
                         </button>
                     </div>
                 </div>
