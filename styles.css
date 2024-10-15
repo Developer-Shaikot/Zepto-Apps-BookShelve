@@ -1,0 +1,455 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    position: sticky; /* Sticks to the top */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 1.5rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    color: #ffdd57; /* Changes color on hover */
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffdd57; /* Underline effect on hover */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px; /* Slightly below the text */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%; /* Expands underline to full width */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Filter Container */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+/* Search Bar Styles */
+#search-bar {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 300px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#search-bar:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Genre Dropdown Styles */
+#genre-filter {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 200px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath d="M7 10l5 5 5-5z"%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#genre-filter:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+#genre-filter option {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusts to 4 cards per row */
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 2rem;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* Book Card Styles */
+.book-card {
+    position: relative;
+    width: 100%; /* Fixed width for consistency */
+    height: 95%; /* Fixed height for uniformity */
+    margin: 10px;
+    gap: 15px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px; /* Softer corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+}
+
+/* Hover effect for book cards */
+.book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Cover Image Styles */
+.book-cover {
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    object-fit: contain; /* Ensures the entire image is visible */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.book-content {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #f5b3b3; /* Light red background */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-content:hover {
+    background-color: #f3707b; /* Darker red when hovered */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem; /* Space between the icon and the text */
+}
+
+.book-content:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #e86671;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+/* Pagination Button Styles */
+.pagination button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 1rem; /* Ensures buttons are readable on smaller screens */
+}
+
+/* Hover effect for pagination buttons */
+.pagination button:hover:not(:disabled) {
+    background-color: #e2e6ea;
+}
+
+/* Disabled button styles */
+.pagination button:disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+    border-color: #ccc;
+}
+
+/* Active page button styles */
+.pagination button.active {
+    background-color: #343a40;
+    color: white;
+    border-color: #343a40;
+}
+
+/* Responsive Pagination */
+@media (max-width: 768px) {
+    .pagination button {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem; /* Slightly smaller font for better fit */
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: #007bff;
+    animation: spin 1s infinite linear;
+    margin: 2rem auto;
+}
+
+/* wishlist */
+.wishlist {
+    padding-left: 6%;
+}
+/* Animation for removing a book card */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+#wishlist-books {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusts to 4 cards per row */
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 2rem;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* book-details page */
+.book-details {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+}
+
+.book-details-content {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #f5b3b3; /* Light red background */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-details-content:hover {
+    background-color: #f3707b; /* Darker red when hovered */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Book Cover Styles */
+.book-details-cover {
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Info Container */
+.book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    color: #333;
+}
+
+/* Title Styles */
+.book-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Author Styles */
+.book-info p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Description Styles */
+.book-description {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff; /* Adds a blue accent line */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-details {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .book-cover {
+        max-width: 100%;
+    }
+
+    .book-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .book-info p {
+        text-align: center;
+    }
+}
+
+/* book details end */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1600px) {
+    #book-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusts to 4 cards per row */
+
+        gap: 50px;
+
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .book-card {
+        width: 100%;
+    }
+    #wishlist-books {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusts to 4 cards per row */
+
+        gap: 50px;
+
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (max-width: 768px) {
+    #book-list {
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(150px, 1fr)
+        ); /* Adjusts for smaller screens */
+        gap: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #wishlist-books {
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(150px, 1fr)
+        ); /* Adjusts for smaller screens */
+        gap: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .book-card {
+        width: 80%;
+    }
+
+    .book-cover {
+        height: 200px; /* Adjust height for smaller cards */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        gap: 10px;
+        padding: 0.5rem;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+}
