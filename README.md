@@ -8,7 +8,9 @@ Hosted link: https://zepto-book-shelve.netlify.app
 </div>
 
 Here's a detailed README file for th project based on the requirements:
-<img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015618/ASH/Zepto-Apps-BookShelve/xvrrnasodgzymsgvkmtt.png" alt="WebsiteView" style="width:48%; border: 1px solid black;/>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+  <img  src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015618/ASH/Zepto-Apps-BookShelve/xvrrnasodgzymsgvkmtt.png" alt="Image 4" style="width:48%; border: 1px solid black;">
+</div>
 ---
 
 # Gutendex Books Web Application
