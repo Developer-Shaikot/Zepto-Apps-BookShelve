@@ -1,12 +1,12 @@
 Hosted link: https://zepto-book-shelve.netlify.app
 # Zepto-Apps-BookShelve
-<div>
-  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015611/ASH/Zepto-Apps-BookShelve/g7yq8mrrkpqhazfpyy1u.png" alt="Image 2" style="width:48%; border: 1px solid black; display:inline-block;">
-  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015833/ASH/Zepto-Apps-BookShelve/m4tjmadw62ngtun3ubz3.png" alt="Image 1" style="width:48%; border: 1px solid black; margin-right: 2px; display:inline-block;">
-  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015612/ASH/Zepto-Apps-BookShelve/vti4zwhmn2lwp5k73rgi.png" style="width:48%; border: 1px solid black; display:inline-block;">
-  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015618/ASH/Zepto-Apps-BookShelve/xvrrnasodgzymsgvkmtt.png" alt="Image 1" style="width:48%; border: 1px solid black; margin-right: 2px; display:inline-block;">
-
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015611/ASH/Zepto-Apps-BookShelve/g7yq8mrrkpqhazfpyy1u.png" alt="Image 1" style="width:48%; border: 1px solid black; margin-bottom: 10px;">
+  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015833/ASH/Zepto-Apps-BookShelve/m4tjmadw62ngtun3ubz3.png" alt="Image 2" style="width:48%; border: 1px solid black; margin-bottom: 10px;">
+  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015612/ASH/Zepto-Apps-BookShelve/vti4zwhmn2lwp5k73rgi.png" alt="Image 3" style="width:48%; border: 1px solid black;">
+  <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015618/ASH/Zepto-Apps-BookShelve/xvrrnasodgzymsgvkmtt.png" alt="Image 4" style="width:48%; border: 1px solid black;">
 </div>
+
 Here's a detailed README file for your project based on the requirements:
 
 ---
