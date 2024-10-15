@@ -13,12 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const displayWishlistBooks = () => {
         let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-        // Show the spinner when fetching data starts
         showLoadingSpinner();
 
         if (wishlist.length === 0) {
             wishlistBooksContainer.innerHTML = `<p >Your wishlist is empty.</p>`;
-            hideLoadingSpinner(); // Hide the spinner if there are no items
+            hideLoadingSpinner();
             return;
         }
 
@@ -55,10 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Error fetching wishlist books:", error);
             })
             .finally(() => {
-                hideLoadingSpinner(); // Hide the spinner once the data has been fetched
+                hideLoadingSpinner();
             });
     };
 
-    // Initialize the display function on page load
     displayWishlistBooks();
 });

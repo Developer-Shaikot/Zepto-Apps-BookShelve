@@ -256,7 +256,7 @@ header {
 
 #wishlist-books {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusts to 4 cards per row */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     gap: 50px;
@@ -289,7 +289,7 @@ header {
     bottom: 12px;
     left: 7%;
     padding: 0.5rem 1rem;
-    background-color: #f5b3b3; /* Light red background */
+    background-color: #f5b3b3;
     color: white;
     border: none;
     border-radius: 20px;
@@ -299,10 +299,9 @@ header {
 }
 
 .book-details-content:hover {
-    background-color: #f3707b; /* Darker red when hovered */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #f3707b;
+    transform: scale(1.05);
 }
-/* Book Cover Styles */
 .book-details-cover {
     max-width: 350px;
     margin-top: 12%;
@@ -311,7 +310,6 @@ header {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Book Info Container */
 .book-info {
     display: flex;
     flex-direction: column;
@@ -320,7 +318,6 @@ header {
     color: #333;
 }
 
-/* Title Styles */
 .book-title {
     font-size: 32px;
     font-weight: 700;
@@ -328,14 +325,12 @@ header {
     margin-bottom: 10px;
 }
 
-/* Author Styles */
 .book-info p {
     margin: 0;
     line-height: 1.5;
     font-size: 16px;
 }
 
-/* Description Styles */
 .book-description {
     margin-top: 20px;
     line-height: 1.6;
@@ -344,7 +339,7 @@ header {
     background-color: #fff;
     padding: 10px;
     border-radius: 6px;
-    border-left: 4px solid #007bff; /* Adds a blue accent line */
+    border-left: 4px solid #007bff;
 }
 
 /* Responsive Design */
@@ -374,7 +369,7 @@ header {
         bottom: 10px;
         left: 76%;
         padding: 0.5rem 1rem;
-        background-color: #f5b3b3; /* Light red background */
+        background-color: #f5b3b3;
         color: white;
         border: none;
         border-radius: 20px;
@@ -407,7 +402,7 @@ header {
 }
 @media (max-width: 1600px) {
     #book-list {
-        grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusts to 4 cards per row */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
         gap: 50px;
 
@@ -419,7 +414,7 @@ header {
         width: 100%;
     }
     #wishlist-books {
-        grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusts to 4 cards per row */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
         gap: 50px;
 
@@ -429,20 +424,14 @@ header {
 }
 @media (max-width: 768px) {
     #book-list {
-        grid-template-columns: repeat(
-            auto-fill,
-            minmax(150px, 1fr)
-        ); /* Adjusts for smaller screens */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 50px;
         margin-left: 5%;
         margin-right: 5%;
     }
 
     #wishlist-books {
-        grid-template-columns: repeat(
-            auto-fill,
-            minmax(150px, 1fr)
-        ); /* Adjusts for smaller screens */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 50px;
         margin-left: 5%;
         margin-right: 5%;
@@ -453,7 +442,7 @@ header {
     }
 
     .book-cover {
-        height: 200px; /* Adjust height for smaller cards */
+        height: 200px;
     }
 }
 

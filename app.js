@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }">&gt;</button>
         `;
 
-        // Add event listeners to all pagination buttons
         document.querySelectorAll("#pagination button").forEach((button) => {
             button.addEventListener("click", () => {
                 const page = parseInt(button.getAttribute("data-page"));
@@ -109,8 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     genreFilter.addEventListener("change", (e) => {
-        showLoadingSpinner(); // Show the spinner when the genre change event is triggered
-        const selectedGenre = e.target.value.toLowerCase(); // Convert the selected genre to lowercase for matching
+        showLoadingSpinner();
+        const selectedGenre = e.target.value.toLowerCase();
 
         setTimeout(() => {
             if (selectedGenre) {
@@ -125,8 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 filteredBooks = books;
             }
             displayBooks();
-            hideLoadingSpinner(); // Hide the spinner after the filtering is complete
-        }, 300); // Adding a slight delay to simulate the loading behavior
+            hideLoadingSpinner();
+        }, 300);
     });
 
     const toggleWishlist = (bookId) => {

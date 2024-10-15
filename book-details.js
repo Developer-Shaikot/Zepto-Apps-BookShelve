@@ -11,17 +11,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         spinner.classList.add("hidden");
     };
 
-    // Get the book ID from the URL query parameter
     const urlParams = new URLSearchParams(window.location.search);
     const bookId = urlParams.get("bookId");
 
     if (bookId) {
-        showLoadingSpinner(); // Show spinner before fetching data
+        showLoadingSpinner();
         try {
             const response = await fetch(`https://gutendex.com/books/${bookId}`);
             const book = await response.json();
 
-            hideLoadingSpinner(); // Hide spinner once the data is loaded
+            hideLoadingSpinner();
 
             const formatLinks = Object.entries(book.formats)
                 .map(
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
         } catch (error) {
             console.error("Error fetching book details:", error);
-            hideLoadingSpinner(); // Hide spinner in case of an error
+            hideLoadingSpinner();
             bookDetailsContainer.innerHTML = `<p>Error loading book details. Please try again later.</p>`;
         }
     } else {
