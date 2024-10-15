@@ -1,4 +1,4 @@
-Hosted link: https://weather-app-loosely-coupled-tech-task.netlify.app/
+Hosted link: https://zepto-book-shelve.netlify.app
 # Zepto-Apps-BookShelve
 <div>
   <img src="https://res.cloudinary.com/ddlbvpfq1/image/upload/v1729015618/ASH/Zepto-Apps-BookShelve/xvrrnasodgzymsgvkmtt.png" alt="Image 1" style="width:48%; border: 1px solid black; margin-right: 2px; display:inline-block;">
