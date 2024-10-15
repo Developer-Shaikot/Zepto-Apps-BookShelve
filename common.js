@@ -24,13 +24,12 @@ function removeFromWishlist(bookId) {
         .closest(".book-card");
 
     if (bookCard) {
-        bookCard.classList.add("fade-out");
-
         bookCard.addEventListener("transitionend", () => {
-            document.addEventListener("DOMContentLoaded", () => {
-                displayWishlistBooks();
-            });
+            bookCard.remove();
+            displayWishlistBooks();
         });
+
+        bookCard.classList.add("fade-out");
     }
 }
 
