@@ -11,6 +11,7 @@ const toggleWishlist = (bookId) => {
     if (typeof displayBooks === "function") {
         displayBooks();
     }
+    window.location.href = `wishlist.html`;
 };
 
 function removeFromWishlist(bookId) {
