@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 wishlistBooksContainer.innerHTML = books
                     .map(
                         (book) => `
-                       
+                            
                             <div class="book-card">
                                 <img src="${
                                     book.formats["image/jpeg"] || "placeholder.jpg"

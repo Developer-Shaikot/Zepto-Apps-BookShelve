@@ -38,23 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const displayBooks = () => {
         bookList.innerHTML = filteredBooks
             .map(
-                (book) => `
-                <div class="book-card" >
-
-                <img onclick="navigateToDetails(${book.id})" src="${
-                    book.formats["image/jpeg"] || "placeholder.jpg"
-                }" alt="Book Cover" class="book-cover">
-
-         
-                    <h3>${truncateTitle(book.title, 5)}</h3> <!-- Limit to 5 words -->
-            <p>Author: ${book.authors.map((author) => author.name).join(", ")}</p>
-                    <button class="book-content" onclick="toggleWishlist(${
-                        book.id
-                    })"> <img src="assets/icons/wishlist.png"
-                }" alt="icon" class="icon">❤️</button>
-           
-            </div>
-        `
+                (book) =>
+                    `<div class="book-card" >
+                        <div onclick="navigateToDetails(${book.id})">
+                            <img src="${
+                                book.formats["image/jpeg"] || "placeholder.jpg"
+                            }" alt="Book Cover" class="book-cover">
+                            <h3>${truncateTitle(book.title, 5)}</h3> <!-- Limit to 5 words -->
+                             <p>Author: ${book.authors.map((author) => author.name).join(", ")}</p>
+                        </div>
+                        <button class="book-content" onclick="toggleWishlist(${book.id})"> 
+                            <img src="assets/icons/wishlist.png"}" alt="icon" class="icon">❤️
+                        </button>
+                    </div>`
             )
             .join("");
     };

@@ -36,3 +36,7 @@ function removeFromWishlist(bookId) {
 const navigateToDetails = (bookId) => {
     window.location.href = `book-details.html?bookId=${bookId}`;
 };
+
+const navigateBack = () => {
+    window.history.back();
+};

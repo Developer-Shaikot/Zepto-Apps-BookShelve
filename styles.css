@@ -125,19 +125,19 @@ header {
 /* Book Card Styles */
 .book-card {
     position: relative;
-    width: 100%; /* Fixed width for consistency */
-    height: 95%; /* Fixed height for uniformity */
+    width: 100%;
+    height: 95%;
     margin: 10px;
     gap: 15px;
     border: 1px solid #ccc;
     padding: 1rem;
-    border-radius: 10px; /* Softer corners */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     background-color: white;
+    cursor: pointer;
 }
 
-/* Hover effect for book cards */
 .book-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -146,10 +146,9 @@ header {
 /* Book Cover Image Styles */
 .book-cover {
     width: 100%;
-    height: 300px; /* Fixed height for consistency */
-    object-fit: contain; /* Ensures the entire image is visible */
+    height: 300px;
+    object-fit: contain;
     border-radius: 5px;
-    cursor: pointer;
     margin-bottom: 1rem;
 }
 
@@ -160,7 +159,7 @@ header {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: #f5b3b3; /* Light red background */
+    background-color: #f5b3b3;
     color: white;
     border: none;
     border-radius: 20px;
@@ -170,14 +169,14 @@ header {
 }
 
 .book-content:hover {
-    background-color: #f3707b; /* Darker red when hovered */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #f3707b;
+    transform: scale(1.05);
 }
 
 .icon {
     width: 16px;
     height: 16px;
-    margin-right: 0.5rem; /* Space between the icon and the text */
+    margin-right: 0.5rem;
 }
 
 .book-content:focus {
@@ -188,7 +187,7 @@ header {
 /* Pagination Styles */
 .pagination {
     display: flex;
-    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
@@ -204,7 +203,7 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    font-size: 1rem; /* Ensures buttons are readable on smaller screens */
+    font-size: 1rem;
 }
 
 /* Hover effect for pagination buttons */
@@ -230,7 +229,7 @@ header {
 @media (max-width: 768px) {
     .pagination button {
         padding: 0.3rem 0.8rem;
-        font-size: 0.9rem; /* Slightly smaller font for better fit */
+        font-size: 0.9rem;
     }
 }
 
@@ -247,7 +246,7 @@ header {
 
 /* wishlist */
 .wishlist {
-    padding-left: 6%;
+    padding-left: 8%;
 }
 /* Animation for removing a book card */
 .fade-out {
@@ -304,9 +303,10 @@ header {
     transform: scale(1.05);
 }
 .book-details-cover {
-    max-width: 350px;
+    max-width: 200px;
     margin-top: 12%;
-    height: auto;
+    height: 300px;
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -342,6 +342,26 @@ header {
     border-radius: 6px;
     border-left: 4px solid #007bff;
 }
+
+.back-button {
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 5%;
+}
+
+.navigateIcon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+/* book details end */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -379,8 +399,6 @@ header {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 }
-
-/* book details end */
 
 @keyframes spin {
     to {

@@ -30,23 +30,27 @@ document.addEventListener("DOMContentLoaded", async () => {
                 .join("<br/>");
 
             bookDetailsContainer.innerHTML = `
+                <div class="navigate-back">
+                    <button onclick="navigateBack()" class="back-button">
+                        <img src="assets/icons/back.png" alt="Back Icon" class="navigateIcon"> Back
+                    </button>
+                </div>
                 <div class="book-details">
-                     <div class="book-detail-format">
-            <img src="${
-                book.formats["image/jpeg"] || "placeholder.jpg"
-            }" alt="Book Cover" class="book-details-cover">
-                    <br/>
-                    <div class="book-formats">
+                    <div class="book-detail-format">
+                        <img src="${
+                            book.formats["image/jpeg"] || "placeholder.jpg"
+                        }" alt="Book Cover" class="book-details-cover">
+                        <br/>
+                        <div class="book-formats">
                             <h3>Available Formats:</h3>
                             ${formatLinks}
                         </div>
-        </div>
+                    </div>
                     <div class="book-info">
                         <h1 class="book-title">${book.title}</h1>
                         <p>Author: ${book.authors.map((author) => author.name).join("<br/> ")}</p>
                         <p class="book-description">${book.bookshelves.join("<br/> ")}</p>
                         <p class="book-description">${book.subjects.join("<br/> ")}</p>
-                        
                         <button class="book-details-content" onclick="toggleWishlist(${book.id})">
                             <img src="assets/icons/wishlist.png" alt="icon" class="icon">❤️
                         </button>
